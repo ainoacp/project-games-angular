@@ -1,0 +1,15 @@
+<section>
+    <div data-function="grid" class="b-grid" *ngIf="score < (cardList.length)">
+        <div *ngFor="let card of cardList">
+            <div>   
+                <img *ngIf="card.isClicked" src="{{card.img}}"/>
+                <img *ngIf="card.isCorrect" src="assets/images/memorygame-images/tick.svg"/>
+                <img *ngIf="!card.isClicked && !card.isCorrect" (click)="checkCard(card)" src="assets/images/memorygame-images/universe.svg"/>
+            </div> 
+        </div>
+    </div>
+    <div *ngIf="score === (cardList.length/2)">
+        <h3>¡Lo has conseguido!</h3>
+        <button (click)="reset()">Reset game</button>
+    </div>
+</section>

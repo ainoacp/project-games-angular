@@ -1,0 +1,15 @@
+<section>
+    <div class="c-people">
+        <div *ngFor="let person of people">
+            <img src="{{person.img}}" />
+        </div>
+    </div>
+    <div class="c-questions">
+        <div *ngFor="let question of questions">
+            <h3>{{question.title}}</h3>
+            <div class="options">
+                <button *ngFor="let option of question.options" (click)="chooseOption(question)">{{option}}</button>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,14 @@
+<section>
+    <div data-function="board" class="c-grid">
+        <table *ngFor="let card of tableBoard">
+            <tbody>
+                <img *ngIf="card.isClicked" src="{{card.img}}"/>
+                <img *ngIf="!card.isClicked && !card.isCorrect" (click)="checkCard(card)" src="assets/images/treasurehunt-images/x.png"/>
+            </tbody>
+        </table>
+    </div>
+    <div *ngIf="score === 1">
+        <h3>¡Lo has conseguido!</h3>
+        <button (click)="reset()">Reset game</button>
+    </div>
+</section>

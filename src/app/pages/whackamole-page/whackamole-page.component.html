@@ -1,0 +1,18 @@
+<section>
+    <h1>Whack a mole!</h1>
+    <div class="panel">
+        <h4>Your score:</h4>
+        <p data-function="score">{{score}}</p>
+        <button (click)="start()">Start Game!</button>
+        <div *ngIf="score === 10">
+            <h3>¡Lo has conseguido!</h3>
+            <button (click)="reset()">Reset game</button>
+        </div>
+    </div>
+    <div class="c-grid">
+        <div *ngFor="let card of tableBoard" class="c-square">
+            <img (click)="hunt(card)" src="{{card.img}}"/>
+        </div>
+    </div>
+    
+</section>
