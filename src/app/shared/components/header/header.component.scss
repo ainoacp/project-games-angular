@@ -4,15 +4,23 @@ header{
     align-items: center;
     align-content: center;
     background-color: #691cd6;
+    height: 20vh;
+    h1{
+        color: #FED400;
+        font-family: monospace;
+        font-size: 80px;
+        font-weight: lighter;
+        letter-spacing: 10px;
+        margin: 0;
+    }
 }
 nav{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 1920px;
+    width: 100%;
     height: 72px;
     margin: 30px;
-    width: 100%;
 
     a{
         display: grid;
@@ -21,12 +29,12 @@ nav{
         font-family: Arial, Helvetica, sans-serif;
         font-size: 14px;
         text-decoration: none;
-        color: #a2a1a1;
+        color: #73FD4F;
         padding: 10px;
         margin: 15px;
     }
     a:hover{
-        color: #e09812;
+        color: #FC6731;
         background-color: rgba(255, 255, 255, 0.234);
         border-radius: 10%;
     }
